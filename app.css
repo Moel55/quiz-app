@@ -1,0 +1,81 @@
+/* Your styles should be mobile-first and responsive */
+/* background image on body of the page */
+body {
+  text-align: center;
+  background-image: url("/images/blue-brick.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto;
+  
+}
+
+/* header sizing and styling */
+h1 {
+  font-size: 40px;
+  font-family: 'Cabin Sketch';
+  text-shadow: 3px 6px 3px rgb(36, 92, 138);
+  margin: 50px 0;
+}
+
+/* spacing on top of submit button */
+#submit {
+  margin-top: 15px;
+}
+
+/* sizing background color and styling of the main section */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(239, 110, 18);
+  opacity: 0.75;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 6px 10px rgb(8, 24, 38)
+}
+
+/* sizing of the form */
+#js-trivia-form {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Cabin Sketch';
+  margin: 0;
+}
+
+/* aligning radio buttons text */
+.radio-button {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+/* sizing and spacing radio buttons */
+.radio-button input[type="radio"] {
+  width: 30px;
+  margin-right: 10px;
+}  
+
+@media all and (min-width: 300px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
