@@ -2,7 +2,7 @@
 /* background image on body of the page */
 body {
   text-align: center;
-  background-image: url("/images/blue-brick.jpg");
+  background-image: url("images/blue-brick.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: auto;
@@ -32,7 +32,7 @@ main {
   opacity: 0.75;
   padding-bottom: 20px;
   border-radius: 15px;
-  box-shadow: 3px 6px 10px rgb(8, 24, 38)
+  box-shadow: 3px 6px 10px rgb(8, 24, 38);
 }
 
 /* sizing of the form */
