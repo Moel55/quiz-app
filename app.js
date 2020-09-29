@@ -377,28 +377,24 @@ function submitAnswer() {
     e.preventDefault();
     console.log('next click');
     let selectedAnswer = $('input[name="answer"]:checked').val();
-    
-    checkQuestion(selectedAnswer);
+    let answer = trivia[triviaTracker[0].questionNumber].correctAnswer;
+    triviaTracker[0].questionNumber++;
+
+    if(!selectedAnswer) {
+      triviaTracker[0].questionNumber--
+      noAnswer(!selectedAnswer);
+    }
+    else if(selectedAnswer === answer) {
+      triviaTracker[0].score++;
+      correctAnswer(selectedAnswer, answer);
+    } else {
+      incorrectAnswer(selectedAnswer, answer);
+    }
   });
 }
 
 function render(html) {
   $('main').html(html);
-}
-
-function checkQuestion(guess) {
-  let answer = trivia[triviaTracker[0].questionNumber].correctAnswer;
-  triviaTracker[0].questionNumber++;
-  if(!guess) {
-    triviaTracker[0].questionNumber--
-    noAnswer(!guess);
-  }
-  else if(guess === answer) {
-    triviaTracker[0].score++;
-    correctAnswer(guess, answer);
-  } else {
-    incorrectAnswer(guess, answer);
-  }
 }
 
 function correctAnswer(guess, answer) {
@@ -472,8 +468,6 @@ function triviaRestart () {
   });
 
 }
-
-/* http://127.0.0.1:5501/index.html */ 
 
 
 
